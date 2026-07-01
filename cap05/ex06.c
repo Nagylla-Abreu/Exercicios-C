@@ -8,5 +8,7 @@ int main(){
         printf("%d ", i);
     }
 
+    printf("\nFIM!");
+
     return 0;
 }
