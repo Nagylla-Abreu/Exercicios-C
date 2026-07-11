@@ -2,24 +2,32 @@
 
 int main(){
 
-    int idade, categoria;
+    int idade;
 
-    printf("Digite a idade do nadador: ");
+    printf("Insira a idade do nadador: ");
     scanf("%d", &idade);
 
-    if(idade >= 5 && idade <= 7){
-        printf("O nadador pertence a categoria Infantil A.");
-    }if(idade >= 8 && idade <= 10){
-            printf("O nadador pertence a categoria Infantil B.");
-        }if(idade >= 11 && idade <= 13){
-            printf("O nadador pertence a  categoria Juvenil A.");
-            }if(idade >= 14 && idade <= 17){
-                printf("O nadador pertence a categoria Juvenil B.");
-                }if(idade >= 18){
-                    printf("O nadador pertence a categoria Senior.");
+    if(idade >= 5){
+        if(idade <= 7){
+            printf("Categoria: Infantil A\n");
+        }else{
+            if(idade <= 10){
+                printf("Categoria: Infantil B\n");
+            }else{
+                if(idade <= 13){
+                    printf("Categoria: Juvenil A\n");
                 }else{
-                    printf("O nadador eh novo demais.");
+                    if(idade <= 17){
+                        printf("Categoria Juvenil B\n");
+                    }else{
+                        printf("Categoria: Senior\n");
+                    }
                 }
+            }
+        }
+    }else{
+        printf("Idade invalida\n");
+    }
 
     return 0;
 }
