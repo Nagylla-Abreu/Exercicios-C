@@ -2,18 +2,27 @@
 
 int main(){
 
-    int i, j, n;
-    int num = 1;
+    int i, valor, conta;
+    int primo = 1;
 
-    printf("Insira um numero positivo inteiro: ");
-    scanf("%d", &n);
+    printf("Insira um numero inteiro positivo maior que 1: ");
+    scanf("%d", &valor);
 
-    for(i=1;i<=n;i++){
-        for(j=1;j<=i;j++){
-            printf("%d ", num);
-            num++;
+    if(valor<=1){
+        printf("Numero invalido!");
+    }
+
+    for(i=2;i<valor;i++){
+        if(valor % i == 0){
+            primo = 0;
+            break;
         }
-        printf("\n");
+    }
+
+    if(primo){
+        printf("O numero %d eh primo", valor);
+    }else{
+        printf("O numero %d nao eh primo", valor);
     }
 
     return 0;

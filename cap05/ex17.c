@@ -2,16 +2,18 @@
 
 int main(){
 
-    int i, j, valor, soma;
+    int i, j, n;
+    int num = 1;
 
-    printf("Insira um valor inteiro positivo: ");
-    scanf("%d", &valor);
+    printf("Insira um numero positivo inteiro: ");
+    scanf("%d", &n);
 
-    for(i=1;i<=valor;i++){
-        for(j=1;j<i;j++){
-            soma = i + j;
-            printf("%d ", soma);
+    for(i=1;i<=n;i++){
+        for(j=1;j<=i;j++){
+            printf("%d ", num);
+            num++;
         }
+        printf("\n");
     }
 
     return 0;
