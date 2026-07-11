@@ -2,14 +2,19 @@
 
 int main(){
 
-    int i, valor;
+    int i, j, n;
+    int num = 1;
 
-    scanf("%d", &valor);
+    printf("Insira um numero positivo inteiro: ");
+    scanf("%d", &n);
 
-    for(i=1;i<=valor;i++){
-        if(valor%i==1 && valor%valor==1){
-            printf("%d eh primo", valor);
+    for(i=1;i<=n;i++){
+        for(j=1;j<=i;j++){
+            printf("%d ", num);
+            num++;
         }
+        printf("\n");
     }
+
     return 0;
 }
